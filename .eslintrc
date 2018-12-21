@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "airbnb",
+  ],
+  "plugins": ["jest"],
+  "env": {
+    "jest/globals": true,
+  },
+  "rules": {
+    "max-len": ["error", {
+      "code": 80,
+      "tabWidth": 2,
+      "ignoreComments": true,
+      "ignoreStrings": true,
+      "ignoreRegExpLiterals": true,
+      "ignoreTemplateLiterals": true
+    }],
+    "prettier/prettier": 0,
+    "import/no-named-as-default": 0,
+  }
+}
