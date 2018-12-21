@@ -1,9 +1,13 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+const calculateScore = require('./calculateScore');
 
 const app = express();
 
+app.use(bodyParser.text());
+
 app.post('/', (req, res) => {
-  res.send('Hello World');
+  res.send(`Score: ${calculateScore(req.body)}`);
 });
 
 app.listen(3000, () => {

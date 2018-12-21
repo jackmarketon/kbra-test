@@ -13,7 +13,13 @@ describe('calculateScore', () => {
   it('should calculate a score with misses', () => {
     expect(calculateScore('9-9-9-9-9-9-9-9-9-9-')).toBe(90);
   });
-  it('should calculate a score with misses', () => {
+  it('should calculate a score with spares', () => {
     expect(calculateScore('5/5/5/5/5/5/5/5/5/5/5')).toBe(150);
+  });
+  it('should calculate a score with spares & strikes', () => {
+    expect(calculateScore('5/5/5/5/5/5/5/5/5/5/X')).toBe(155);
+  });
+  it('should calculate a score with spares and strikes', () => {
+    expect(calculateScore('5/5/5/5/5/5/5/5/5/XXx')).toBe(170);
   });
 });
